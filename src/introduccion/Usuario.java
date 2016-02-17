@@ -69,7 +69,7 @@ public class Usuario {
 	 */
 	@Override
 	public String toString() {
-		return "Usuario [login=" + login + ", password=" + password + "]";
+		return "Usuario [login=" + login +"]";
 	}
 /*	public static void main(String[] args) {
 		//probamos el método generarLogin

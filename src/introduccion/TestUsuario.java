@@ -20,6 +20,7 @@ public class TestUsuario {
 			}
 		}
 		System.out.println(usuariosValidos);
+		System.out.println("Nº objetos creados: "+Usuario.getNumeroUsuarios());
 	}
 
 }
