@@ -38,7 +38,7 @@ public class TestJuego {
 			System.out.println("Inicialmente");
 			System.out.println(juego);
 			System.out.println("Eliminando un usuario");
-			juego.eliminarUsuario(u);
+		//	juego.eliminarUsuario(u);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Fichero no existe");;
