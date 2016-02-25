@@ -18,11 +18,15 @@ public class Juego {
 		this.puntuacion= 0;
 		this.listaUsuarios = new ArrayList<Usuario>();
 	}
-	public void addUsuario(Usuario u){
-		this.listaUsuarios.add(u);
+	public boolean addUsuario(Usuario u){
+		return this.listaUsuarios.add(u);
 	}
-	public void eliminarUsuario(Usuario u){
-		this.listaUsuarios.remove(u);
+	public boolean eliminarUsuario(String login){
+		for (Usuario usuario : listaUsuarios) {
+			if (usuario.getLogin().equals(login))
+				return listaUsuarios.remove(usuario);
+		}
+		return false;
 	}
 	public void variarPuntuacion(int puntuacion){
 		this.puntuacion+=puntuacion;

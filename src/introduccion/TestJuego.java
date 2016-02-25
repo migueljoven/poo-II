@@ -28,7 +28,9 @@ public class TestJuego {
 				
 				try {
 					u = new Usuario(login.trim(), password.trim());
-					juego.addUsuario(u);
+					if (juego.addUsuario(u))
+						System.out.println("Usuario "+login.trim()+" añadido correctamente al juego");
+										
 					juego.variarPuntuacion((int) (Math.random()*99));
 				} catch (UsuarioException e) {
 					// TODO Auto-generated catch block
@@ -38,7 +40,11 @@ public class TestJuego {
 			System.out.println("Inicialmente");
 			System.out.println(juego);
 			System.out.println("Eliminando un usuario");
-			juego.eliminarUsuario(u);
+			if (juego.eliminarUsuario("juanito"))
+				System.out.println("Usuario eliminado");
+			else
+				System.out.println("Usuario no encontrado");
+			System.out.println(juego);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Fichero no existe");;
