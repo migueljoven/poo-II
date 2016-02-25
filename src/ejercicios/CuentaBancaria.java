@@ -118,6 +118,38 @@ public class CuentaBancaria {
 	public void ingresarEfectivo(int cantidad){
 		this.saldo+=cantidad;
 	}
+	
+	
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((numeroCuenta == null) ? 0 : numeroCuenta.hashCode());
+		return result;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CuentaBancaria other = (CuentaBancaria) obj;
+		if (numeroCuenta == null) {
+			if (other.numeroCuenta != null)
+				return false;
+		} else if (!numeroCuenta.equals(other.numeroCuenta))
+			return false;
+		return true;
+	}
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
